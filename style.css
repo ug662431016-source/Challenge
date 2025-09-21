@@ -123,7 +123,7 @@ body {
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
 }
 
@@ -226,11 +226,11 @@ footer {
 }
 
 /* Go to Top Button */
-.go-to-top {
+#goTop {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #4285F4;
+    background-color: #f44242;
     color: white;
     width: 40px;
     height: 40px;

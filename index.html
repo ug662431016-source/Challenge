@@ -10,11 +10,46 @@
     <!-- Navigation Bar -->
     <nav class="nav-bar" id="top">
         <div class="logo">
-            <!-- SVG Logo -->
-            <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="45" fill="#4285F4" />
-                <text x="50" y="65" font-size="40" fill="white" text-anchor="middle">P</text>
-            </svg>
+    <!-- Palestine Badge Logo -->
+<svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="palBadgeLogo">
+  <title id="palBadgeLogo">Palestine Badge Logo</title>
+
+  <defs>
+    <!-- Gradient สีธงปาเลสไตน์ -->
+    <linearGradient id="palGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF0000"/>   <!-- แดง -->
+      <stop offset="40%" stop-color="#000000"/>  <!-- ดำ -->
+      <stop offset="60%" stop-color="#FFFFFF"/>  <!-- ขาว -->
+      <stop offset="100%" stop-color="#007A3D"/> <!-- เขียว -->
+    </linearGradient>
+
+    <!-- เงาสำหรับตัวอักษร -->
+    <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- ClipPath สำหรับวงกลม -->
+    <clipPath id="circleClip">
+      <circle cx="100" cy="100" r="95"/>
+    </clipPath>
+  </defs>
+
+  <!-- วงกลมขอบนอก -->
+  
+
+  <!-- Gradient P ในวงกลม -->
+  <g clip-path="url(#circleClip)">
+    <!-- วงกลมพื้นหลังสีดำ -->
+    <circle cx="100" cy="100" r="90" fill="url(#palGradient)"/>
+  <!-- ตัวอักษร P -->
+    <text x="100" y="115" font-size="70" font-weight="bold" text-anchor="middle"
+          font-family="Arial, sans-serif" fill="#FFEA20" filter="url(#textShadow)">
+      P
+    </text>
+   
+  </g>
+</svg>
+            
         </div>
         <ul class="nav-links">
             <li><a href="#top">Top</a></li>
@@ -31,7 +66,7 @@
         </div>
     </nav>
 
-    <!-- Tab Bar (for tablets) -->
+      <!-- Tab Bar (for tablets) -->
     <div class="tab-bar">
         <a href="#top">Top</a>
         <a href="#introduction">Introduction</a>
@@ -43,7 +78,7 @@
     <!-- Build Your Mindset Section -->
     <section id="introduction" class="mindset-section">
         <h1>Build Your Mindset</h1>
-        <p>Developing the right mindset is crucial for personal and professional growth. It shapes how we perceive challenges, interact with others, and approach opportunities. A growth mindset, as opposed to a fixed mindset, allows us to embrace challenges, persist in the face of setbacks, learn from criticism, and find inspiration in the success of others. By cultivating a positive and growth-oriented mindset, we open ourselves to continuous learning and improvement, ultimately leading to greater fulfillment and achievement in all aspects of life.</p>
+        <p>Success starts with a strong and positive mindset. Keep moving forward!</p>
     </section>
 
     <!-- Cards of Palestine -->
@@ -118,34 +153,34 @@
             </div>
             <!-- Rafah -->
             <div class="card">
-                <img src="https://picsum.photos/seed/rafah/300/200.jpg" alt="Rafah">
+                <img src="https://th.bing.com/th/id/OIP.VH_sLTSD7s5nYACqKhosQQHaE7" alt="Rafah">
                 <h3>Rafah</h3>
                 <p>Rafah is a Palestinian city in the southern Gaza Strip, located at the border with Egypt. It is an important crossing point between Gaza and Egypt.</p>
             </div>
             <!-- Tulkarm -->
             <div class="card">
-                <img src="https://picsum.photos/seed/tulkarm/300/200.jpg" alt="Tulkarm">
+                <img src="https://th.bing.com/th/id/OIP.49Je249EpAvwI-Bxmt447gHaDx" alt="Tulkarm">
                 <h3>Tulkarm</h3>
                 <p>Tulkarm is a Palestinian city in the northwestern West Bank. It is known for its fertile agricultural lands and is a center for the production of citrus fruits, olives, and vegetables.</p>
             </div>
             <!-- Tubas -->
             <div class="card">
-                <img src="https://picsum.photos/seed/tubas/300/200.jpg" alt="Tubas">
+                <img src="https://th.bing.com/th/id/OIP.rWUIx9K4ZkLdURiG0whfiwHaE8" alt="Tubas">
                 <h3>Tubas</h3>
                 <p>Tubas is a small Palestinian city in the northeastern West Bank. It is an agricultural area known for its production of olives, figs, and grains.</p>
             </div>
             <!-- Salfit -->
             <div class="card">
-                <img src="https://picsum.photos/seed/salfit/300/200.jpg" alt="Salfit">
+                <img src="https://th.bing.com/th/id/OIP.dVifVwjBSvigoNRo_HizdQHaFP" alt="Salfit">
                 <h3>Salfit</h3>
                 <p>Salfit is a Palestinian city in the central West Bank. It is known for its olive groves and stone quarries, and is an important administrative center for the surrounding villages.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form -->
+     <!-- Contact Form -->
     <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
+        <h2>Contact Me </Form></h2>
         <form class="contact-form">
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -160,11 +195,11 @@
                 <input type="tel" id="phone" name="phone" pattern="[0-9]+" required>
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" pattern=".+@ftu\.ac\.th" required>
+                <label>Email (@ftu.ac.th only):</label>
+                <input type="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@ftu\.ac\.th" required />
             </div>
             <div class="form-group">
-                <label for="secret">Secret Word:</label>
+                <label for="secret">Password:</label>
                 <input type="password" id="secret" name="secret" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" required>
             </div>
             <div class="form-group">
@@ -177,10 +212,10 @@
 
     <!-- Footer -->
     <footer id="bottom">
-        <p>&copy; 2023 Midterm Challenge. All rights reserved.</p>
+        <p>&copy; 2025 Midterm Challenge. All rights reserved.</p>
     </footer>
 
-    <!-- Go to Top Button -->
-    <a href="#top" class="go-to-top">↑</a>
+     <!--  Go to Top Button -->
+  <button id="goTop" onclick="window.scrollTo({top:0,behavior:'smooth'});">↑</button>
 </body>
 </html>
